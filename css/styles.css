@@ -1,0 +1,57 @@
+.kanban {
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background-color: peru;
+    border-radius: 5px;
+}
+
+.kanban * {
+    font-family: sans-serif;
+}
+
+.kanban__column {
+    flex: 1;
+}
+
+.kanban__column:not(:last-child) {
+    margin-right: 30px;
+}
+
+.kanban__column-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    /* This prevents users from accidentally or purposely moving stuff you don't want them moving. Since our kanban board is focused on dragging things around, we don't want the title of the columns drag around. */
+    user-select: none;
+}
+
+.kanban__item-input {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* The dropzone are the areas where each kanban tab can be dropped into */
+.kanban__dropzone {
+    height: 20px;
+    transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active {
+    height: 40px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.kanban__add-item {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
